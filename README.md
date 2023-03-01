@@ -14,3 +14,98 @@ Við byrjuðum að teikna út hvernig fígúran okkar ætti að vera og ná í �
 
 **Video**
 https://youtu.be/SZJ2jEFvygw
+
+
+
+**Kóði**
+#include "Arduino.h"
+#include "SoftwareSerial.h"
+#include "DFRobotDFPlayerMini.h"
+#include <Servo.h>
+#include <MyDelay.h>
+
+void ledBlink();
+void mouth();
+void body();
+void body2();
+
+MyDelay SERVOtime(15, mouth, 6);
+MyDelay LEDtime(15, ledBlink, 6);
+MyDelay BODY2time(10000, body2, 2);
+
+MyDelay BODYtime(100, body, 2);
+
+
+int enA = 11;
+int in1 = 10;
+int in2 = 9;
+
+int ledState = LOW;
+
+Servo myservo; 
+
+int pos = 0;
+
+const int ServoPin = 3;
+int LEDpin = 13;
+
+void setup()
+{
+  myservo.attach(ServoPin);
+  pinMode(LEDpin,OUTPUT);
+  LEDtime.start();
+  SERVOtime.start();
+  BODYtime.start();
+  BODY2time.start();
+
+  pinMode(enA, OUTPUT);
+  pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+
+  digitalWrite(in1, LOW);
+    digitalWrite(in2, LOW);
+
+}
+
+
+void loop() 
+{
+  SERVOtime.update();
+  LEDtime.update();
+  BODYtime.update();
+ 
+  BODY2time.update();
+}
+
+void mouth() {
+  for (pos = 90; pos <= 160; pos += 6){
+    myservo.write(pos);
+    delay(15);
+    }
+  for (pos = 160; pos >= 90; pos -= 6) { 
+    myservo.write(pos); 
+    delay(15);
+    }
+}
+
+void ledBlink()
+{
+  if (ledState == LOW) 
+    ledState = HIGH;
+  else
+    ledState = LOW;
+  digitalWrite(LEDpin, ledState);
+
+}
+
+void body() {
+  analogWrite(enA, 255);
+  digitalWrite(in1, HIGH);
+  digitalWrite(in2, LOW);
+}
+
+void body2() {
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, LOW);
+  digitalWrite(LEDpin, LOW);
+}
