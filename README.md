@@ -9,6 +9,11 @@ Við byrjuðum að teikna út hvernig fígúran okkar ætti að vera og ná í �
 
 [Myndband](https://youtu.be/SZJ2jEFvygw)
 
+[<img src="https://img.youtube.com/vi/SZJ2jEFvygw.jpg" width="50%" height="50%">](https://youtu.be/SZJ2jEFvygw)
+
+
+---
+
 ![image_50392577](https://user-images.githubusercontent.com/123474820/222184169-98a115d0-eedc-4d68-bd62-619794939c9f.JPG)
 ![image_50414593](https://user-images.githubusercontent.com/123474820/222184179-b9fcc1e0-9368-426e-b40f-410246f52045.JPG)
 ![image_50389761](https://user-images.githubusercontent.com/123474820/222184189-5327c98f-0c2a-464c-a905-593f7946032e.JPG)
