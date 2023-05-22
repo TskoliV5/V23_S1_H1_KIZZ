@@ -9,6 +9,7 @@ Við byrjuðum að teikna út hvernig fígúran okkar ætti að vera og ná í �
 
 [Myndband](https://youtu.be/SZJ2jEFvygw)
 
+
 [<img src="https://img.youtube.com/vi/SZJ2jEFvygw.jpg" width="50%" height="50%">](https://youtu.be/SZJ2jEFvygw)
 
 
